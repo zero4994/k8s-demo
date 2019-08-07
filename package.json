@@ -5,5 +5,13 @@
   "repository": "https://github.com/zero4994/k8s-demo.git",
   "author": "zero4994 <cavc94@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
 }
