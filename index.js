@@ -7,7 +7,7 @@ const app = express();
 app.use(morgan("combined"));
 
 app.get("/api/hello", (req, res) => {
-  res.json("Hello World");
+  res.json("Hello World - v2");
 });
 
 const port = process.env.PORT || 3000;
