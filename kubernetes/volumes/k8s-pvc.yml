@@ -8,3 +8,4 @@ spec:
   resources:
     requests:
       storage: 1Gi
+# https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes
