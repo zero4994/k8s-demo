@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: helloworld-db
+    spec:
+      containers:
+        - name: k8s-demo
+          image: zero4994/k8s-demo:0.3.0
+          command: ["yarn", "db"]
+          ports:
+            - name: nodejs-port
+              containerPort: 3000
+          env:
+            - name: host
+              value: database-service
+            - name: username
+              value: root
+            - name: password
+              valueFrom:
+                secretKeyRef:
+                  name: helloworld-secrets
+                  key: rootPassword
+            - name: database
+              valueFrom:
+                secretKeyRef:
+                  name: helloworld-secrets
+                  key: database
