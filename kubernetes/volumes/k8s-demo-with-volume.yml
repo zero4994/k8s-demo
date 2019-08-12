@@ -21,4 +21,4 @@ spec:
       volumes:
         - name: myvolume
           persistentVolumeClaim:
-            claimName: myclaim
+            claimName: helloworld-disk
